@@ -5,4 +5,6 @@ describe Menu do
     menu = Menu.new
     expect(menu.show_menu).to be_a_kind_of(String)
   end
+
+
 end
