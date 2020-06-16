@@ -26,4 +26,5 @@ class Menu
       "That is not on our menu!"
     end
   end
+  
 end
