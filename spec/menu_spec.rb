@@ -8,9 +8,14 @@ describe 'Menu Display' do
 
   describe 'Dish Selection' do
 
-    it 'will raise an error if dish name is not included' do
+    it 'will raise an error if dish selected is not on the menu' do
       menu = Menu.new
-      expect(menu.add_items(0)).to raise_error "Invalid entry"
+      expect(menu.add_items("Pork Rind", 3)).to eq "That is not on our menu!"
+    end
+
+    it 'will give an added to basket message otherwise' do
+      menu = Menu.new
+      expect(menu.add_items("Prawn Nigiri", 1)).to eq "Nice one man"
     end
 
 

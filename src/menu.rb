@@ -19,4 +19,11 @@ class Menu
     end
   end
 
+  def add_items(dish, quantity)
+    if @dishes.keys.include?(dish)
+      "Nice one man"
+    else
+      "That is not on our menu!"
+    end
+  end
 end
