@@ -1,4 +1,4 @@
-# takeaway-challenge-js
+# takeaway-challenge-2
 An example of a restaurant takeaway in Javascript
 
 
