@@ -21,7 +21,7 @@ class Menu
 
   def add_items(dish, quantity)
     if @dishes.keys.include?(dish)
-      "Nice one man"
+      "Added to basket!"
     else
       "That is not on our menu!"
     end

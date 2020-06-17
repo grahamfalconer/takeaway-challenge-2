@@ -7,4 +7,6 @@ describe Basket do
     basket.items << item
     expect(basket.items.length).to eq 1
   end
+
+  
 end

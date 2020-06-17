@@ -14,7 +14,8 @@ describe 'Menu Display' do
 
     it 'will give an added to basket message if successful' do
       menu = Menu.new
-      expect(menu.add_items("Prawn Nigiri", 1)).to eq "Nice one man"
+      expect(menu.add_items("Prawn Nigiri", 1)).to eq "Added to basket!"
     end
+
   end
 end
