@@ -1,7 +1,9 @@
 class Menu
-  attr_reader :dishes
+  attr_reader :dishes, :selection, :selection_active
 
   def initialize
+    @selection_active = false
+    @selection = []
     @dishes = {
       "Prawn Nigiri" => 3,
       "Salmon Nigiri" => 3,
@@ -21,10 +23,10 @@ class Menu
 
   def add_items(dish, quantity)
     if @dishes.keys.include?(dish)
-      "Added to basket!"
+
+      "Dish Added!"
     else
       "That is not on our menu!"
     end
   end
-  
 end

@@ -5,17 +5,21 @@ describe 'Menu Display' do
     menu = Menu.new
     expect(menu.show_menu).to be_a_kind_of(String)
   end
+end
 
-  describe 'Dish Selection' do
-    it 'will raise an error if dish selected is not on the menu' do
-      menu = Menu.new
-      expect(menu.add_items("Pork Rind", 3)).to eq "That is not on our menu!"
-    end
+describe 'Dish Selection' do
+  it 'will raise an error if dish selected is not on the menu' do
+    menu = Menu.new
+    expect(menu.add_items("Pork Rind", 3)).to eq "That is not on our menu!"
+  end
 
-    it 'will give an added to basket message if successful' do
-      menu = Menu.new
-      expect(menu.add_items("Prawn Nigiri", 1)).to eq "Added to basket!"
-    end
+  it 'will give an added to basket message if successful' do
+    menu = Menu.new
+    expect(menu.add_items("Prawn Nigiri", 1)).to eq "Dish Added!"
+  end
 
+  it 'knows when the selection is empty' do
+    menu = Menu.new
+    expect(menu.selection_active).to eq false
   end
 end
