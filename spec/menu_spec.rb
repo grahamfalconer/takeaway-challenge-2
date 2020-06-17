@@ -30,7 +30,6 @@ describe Menu do
       menu.add_items("Prawn Nigiri", 1)
       expect(menu.selection_active).to eq true
     end
-
   end
-  
+
 end

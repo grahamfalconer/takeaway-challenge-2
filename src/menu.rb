@@ -1,3 +1,5 @@
+require_relative 'item'
+
 class Menu
   attr_reader :dishes, :selection, :selection_active
 
@@ -23,7 +25,8 @@ class Menu
 
   def add_items(dish, quantity)
     if @dishes.keys.include?(dish)
-      "Dish Added!"
+      @selection_active = true
+      return "Dish Added!"
     else
       "That is not on our menu!"
     end
