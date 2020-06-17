@@ -23,10 +23,10 @@ class Menu
 
   def add_items(dish, quantity)
     if @dishes.keys.include?(dish)
-
       "Dish Added!"
     else
       "That is not on our menu!"
     end
   end
+
 end
