@@ -24,20 +24,24 @@ class Menu
 
   def add_items(dish, quantity)
     if @dishes.keys.include?(dish)
-      return "Dish Added!"
+      item = Item.new(dish, @dishes[dish], quantity )
       @selection << item
-      set_active
+      return "Dish Added!"
     else
       "That is not on our menu!"
     end
   end
+
+  def remove_items(dish, amount)
+    @selection.each do |item|
+      if item.dish == dish
+        puts item.quantity + 1
+      end
+    end
+  end
+
 end
 
-
-menu = Menu.new()
-dish_name = menu.dishes.keys[1]
-dish_price = menu.dishes.values[1]
-item = Item.new( dish_name, dish_price, 2 )
-menu.selection << item
-p menu
-p item
+menu = Menu.new
+menu.add_items("Katsu Bento", 3)
+p menu.remove_items("Katsu Bento", 1)

@@ -1,4 +1,3 @@
-
 class Basket
   attr_reader :items
 
