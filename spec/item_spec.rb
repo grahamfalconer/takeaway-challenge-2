@@ -23,6 +23,11 @@ describe Item do
       item = Item.new("Prawn Nigiri", 3, 10)
       expect{ item.one_more }.to change { item.quantity }.from(10).to(11)
     end
+
+    it 'can descrease the quantity by one' do
+      item = Item.new("Prawn Nigiri", 3, 10)
+      expect{ item.one_less }.to change { item.quantity }.from(10).to(9)
+    end
   end
 
 end

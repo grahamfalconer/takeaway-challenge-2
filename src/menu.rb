@@ -39,9 +39,4 @@ class Menu
       end
     end
   end
-
 end
-
-menu = Menu.new
-menu.add_items("Katsu Bento", 3)
-p menu.remove_items("Katsu Bento", 1)
