@@ -12,4 +12,7 @@ describe 'Item responsibilities' do
     expect(item.dish).to eq "Prawn Nigiri"
   end
 
+  it 'knows its price' do
+  end
+
 end
