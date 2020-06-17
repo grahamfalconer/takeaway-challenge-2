@@ -1,6 +1,6 @@
 require_relative '../src/item.rb'
 
-describe 'Item responsibilities' do
+describe 'Item Responsibilities' do
 
   it 'Knows its quantity' do
     item = Item.new("Prawn Nigiri", 3, 10)
@@ -13,6 +13,8 @@ describe 'Item responsibilities' do
   end
 
   it 'knows its price' do
+    item = Item.new("Prawn Nigiri", 3, 10)
+    expect(item.price).to eq 3
   end
 
 end
