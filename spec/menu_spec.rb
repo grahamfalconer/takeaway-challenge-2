@@ -18,8 +18,14 @@ describe 'Dish Selection' do
     expect(menu.add_items("Prawn Nigiri", 1)).to eq "Dish Added!"
   end
 
-  it 'knows when the selection is empty' do
+  it 'knows when selection is empty' do
     menu = Menu.new
     expect(menu.selection_active).to eq false
+  end
+  
+  it 'knows when selection is active' do
+    menu = Menu.new
+    menu.add_items("Prawn Nigiri", 1)
+    expect(menu.selection_active).to eq true
   end
 end
