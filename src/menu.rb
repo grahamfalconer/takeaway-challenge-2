@@ -1,10 +1,9 @@
 require_relative 'item'
 
 class Menu
-  attr_reader :dishes, :selection, :selection_active
+  attr_reader :dishes, :selection
 
   def initialize
-    @selection_active = false
     @selection = []
     @dishes = {
       "Prawn Nigiri" => 3,
@@ -25,10 +24,20 @@ class Menu
 
   def add_items(dish, quantity)
     if @dishes.keys.include?(dish)
-      @selection_active = true
       return "Dish Added!"
+      @selection << item
+      set_active
     else
       "That is not on our menu!"
     end
   end
 end
+
+
+menu = Menu.new()
+dish_name = menu.dishes.keys[1]
+dish_price = menu.dishes.values[1]
+item = Item.new( dish_name, dish_price, 2 )
+menu.selection << item
+p menu
+p item
