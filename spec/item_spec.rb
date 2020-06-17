@@ -8,6 +8,8 @@ describe 'Item responsibilities' do
   end
 
   it 'Knows its dish name' do
+    item = Item.new("Prawn Nigiri", 3, 10)
+    expect(item.dish).to eq "Prawn Nigiri"
   end
 
 end
