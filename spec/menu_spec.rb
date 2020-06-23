@@ -9,7 +9,7 @@ describe Menu do
   end
 
   describe '#Dish Selection' do
-    it 'will raise an error if dish selected is not on the menu' do
+    it 'will throw an error if dish selected is not on the menu' do
       menu = Menu.new
       expect(menu.add_items("Pork Rind", 3)).to eq "That is not on our menu!"
     end
